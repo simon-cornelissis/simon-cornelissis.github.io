@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Eindhoven International Project Presentation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #08090A;
+            --blue-950: #0A1525;
+            --blue-900: #0F1E3D;
+            --blue-800: #1E3A5F;
+            --blue-700: #1D4ED8;
+            --blue-600: #2563EB;
+            --blue-500: #3B82F6;
+            --blue-400: #60A5FA;
+            --blue-300: #93C5FD;
+            --blue-200: #BFDBFE;
+            --blue-100: #DBEAFE;
+            --blue-50: #EFF6FF;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal {
+            font-family: var(--font-body);
+            color: var(--gray-800);
+            background-color: var(--white);
+        }
+
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            color: var(--blue-900);
+        }
+
+        .reveal h1 { font-size: 3.5em; }
+        .reveal h2 { color: var(--blue-700); }
+
+        .reveal .slides section {
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .reveal .slides section.center {
+            text-align: center;
+        }
+
+        .reveal ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .reveal ul li {
+            padding-left: 1.5em;
+            position: relative;
+            margin-bottom: 0.5em;
+        }
+
+        .reveal ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--blue-600);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            font-size: 0.4em;
+        }
+
+        .schedule-day {
+            background: var(--blue-50);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .schedule-day h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: var(--blue-700);
+            text-align: center;
+        }
+
+        .schedule-day ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .schedule-day ul li {
+            font-size: 0.9em;
+            margin-bottom: 4px;
+            padding-left: 1em;
+        }
+
+        .schedule-day ul li::before {
+            content: "•";
+        }
+
+        .swot-box {
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .strengths { background-color: var(--blue-50); border-left: 5px solid #22c55e; }
+        .weaknesses { background-color: var(--gray-50); border-left: 5px solid #ef4444; }
+        .opportunities { background-color: var(--blue-50); border-left: 5px solid #3b82f6; }
+        .threats { background-color: var(--gray-50); border-left: 5px solid #f59e0b; }
+
+        .highlight { color: var(--blue-600); font-weight: bold; }
+        
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 0.4em;
+            color: var(--gray-400);
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Title Slide -->
+            <section class="center" data-background-gradient="linear-gradient(to bottom right, var(--blue-950), var(--blue-900))">
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 60px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <h1 style="color: white; margin-bottom: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">International Project</h1>
+                    <h2 style="color: var(--blue-400); font-size: 2.5em; margin-top: 0; letter-spacing: 4px;">Eindhoven</h2>
+                    
+                    <div style="width: 100px; height: 4px; background: var(--blue-500); margin: 30px auto;"></div>
+                    
+                    <h3 style="color: var(--white); font-size: 1.2em; text-transform: none;">AI in Transport & Delivery</h3>
+                    <p style="color: var(--blue-200); font-size: 0.8em; font-weight: bold; margin-top: 40px; letter-spacing: 2px;">A 15-MINUTE REFLECTION & OVERVIEW</p>
+                    
+                    <div style="margin-top: 60px; font-family: var(--font-display); color: var(--blue-100); font-size: 0.9em;">
+                        Presented by <span style="color: var(--blue-400);">Ruhe & Team</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Presentation of the Group -->
+            <section>
+                <h2>Our Team</h2>
+                <div style="display: flex; justify-content: space-around; align-items: center; height: 300px;">
+                    <div style="text-align: center;">
+                        <div style="width: 150px; height: 150px; background: var(--blue-200); border-radius: 50%; margin: 0 auto 20px;"></div>
+                        <h4>Our Team</h4>
+                        <p>Dmytro, Muhammad, Rune, Simon, Yoni</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Table of Content -->
+            <section>
+                <h2>Agenda</h2>
+                <ul>
+                    <li>Project Objectives & Deliverables</li>
+                    <li>Innovative Solutions</li>
+                    <li>Weekly Journey</li>
+                    <li>SWOT Analysis</li>
+                    <li>Team Reflection</li>
+                </ul>
+            </section>
+
+            <!-- Objective of the project -->
+            <section>
+                <h2>Project Objectives</h2>
+                <p><strong>Main Goal:</strong> How to stay human in a technology driven society and attract people to the trucking profession.</p>
+                <ul>
+                    <li>Address the labor shortage in transport.</li>
+                    <li>Integrate AI/IOT without losing the human touch.</li>
+                    <li>Enhance trucker well-being and social connection.</li>
+                    <li>International collaboration (Howest & Fontys).</li>
+                </ul>
+            </section>
+
+            <!-- Deliverable of the project -->
+            <section>
+                <h2>Project Deliverables</h2>
+                <div style="display: flex; gap: 40px;">
+                    <div style="flex: 1;">
+                        <h3>Case 1: Prototype Concept</h3>
+                        <p>A visionary approach to modernizing the trucking experience through integrated technology.</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <h3>Case 2: Tesla Solution</h3>
+                        <p>Specific implementation ideas tailored for high-tech transport environments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Specific Solutions -->
+            <section>
+                <h2>Our Solutions</h2>
+                <div style="display: flex; gap: 20px;">
+                    <div style="flex: 1; padding: 20px; background: var(--blue-50); border-radius: 10px;">
+                        <h3 style="font-size: 1.2em;">TruckBuddy</h3>
+                        <p>A "Tinder for truckers" designed for long distances. Helps drivers find companions, share stops, and maintain social health on the road.</p>
+                    </div>
+                    <div style="flex: 1; padding: 20px; background: var(--gray-50); border-radius: 10px;">
+                        <h3 style="font-size: 1.2em;">Smart IOT Chair</h3>
+                        <p>A specialized truck chair with IOT implementations to ensure maximal comfort and health monitoring for long-haul drivers.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Learnings -->
+            <section>
+                <h2>What did we learn?</h2>
+                <div style="display: flex; gap: 20px;">
+                    <div style="flex: 1; padding: 20px; background: var(--blue-50); border-radius: 10px;">
+                        <h3 style="font-size: 1.2em;">Technical Skills</h3>
+                        <ul>
+                            <li>Azure Cloud Services (deployment & management)</li>
+                            <li>AI Solution Ethics & Implementation</li>
+                            <li>IOT implementations</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; padding: 20px; background: var(--gray-50); border-radius: 10px;">
+                        <h3 style="font-size: 1.2em;">Soft Skills</h3>
+                        <ul>
+                            <li>International Collaboration</li>
+                            <li>Adaptability in "Architectural Chaos"</li>
+                            <li>Industrial Networking</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weekly Overview (Intro) -->
+
+            <!-- Detailed Weekly Journey -->
+            <section>
+                <h2>Monday: Kick-off</h2>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li><strong>Morning:</strong> Tesla inspiration session & assignment introduction.</li>
+                        <li><strong>Afternoon:</strong> Concepting & Big Data Workshop with EATC.</li>
+                        <li><strong>Evening:</strong> Cultural Tasting event to meet international peers.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Tuesday: Exploration</h2>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li><strong>Escape Room:</strong> Team building and problem solving.</li>
+                        <li><strong>Techno-philosophy:</strong> Inspiration session on ethics.</li>
+                        <li><strong>Guided Tour:</strong> Exploring Strijp-S, Eindhoven's tech hub.</li>
+                        <li><strong>Cybersecurity:</strong> Protecting our future solutions.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Wednesday: Development</h2>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li><strong>Workshops:</strong> IoT Workshop for technical grounding.</li>
+                        <li><strong>REALISE:</strong> Deep group work sessions to build the core logic.</li>
+                        <li><strong>Validation:</strong> REALISE AND VALIDATE phases for project robustness.</li>
+                        <li><strong>SDGs:</strong> Aligning our transport solution with Sustainability Goals.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Thursday: Refinement</h2>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li><strong>Cloud & AI:</strong> Workshops on Azure and AI Ethics talk.</li>
+                        <li><strong>Final POC:</strong> Improving the prototype and presenting first concepts.</li>
+                        <li><strong>Closing:</strong> Eindhoven exploration tour followed by a final group dinner.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Friday: Finale</h2>
+                <div style="font-size: 0.75em;">
+                    <ul>
+                        <li><strong>Play Test:</strong> Demoing our solution to peers and experts.</li>
+                        <li><strong>Presentation:</strong> Final pitches, Q&A, and jury evaluation.</li>
+                        <li><strong>Celebration:</strong> Award Ceremony & Certificates.</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <!-- SWOT Analysis -->
+            <section>
+                <h2 style="margin-bottom: 20px;">SWOT Analysis: Eindhoven</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.6em;">
+                    <div class="swot-box strengths">
+                        <strong style="color: #166534; font-size: 1.2em;">STRENGTHS</strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Venue & Organization (Food was great!)</li>
+                            <li>High-profile Guests (Tesla, DAF, NATO, Erdinc Sadan)</li>
+                            <li>Room for own ideas within project boundaries</li>
+                            <li>Seasoned industrial help (DAF)</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box weaknesses">
+                        <strong style="color: #991b1b; font-size: 1.2em;">WEAKNESSES</strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Education level disparity at host school</li>
+                            <li>Chosen topic (Transport & Delivery)</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box opportunities">
+                        <strong style="color: #1e40af; font-size: 1.2em;">OPPORTUNITIES</strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Location (Brainport, more patents than Silicon Valley)</li>
+                            <li>Evolving AI solutions and ethics</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box threats">
+                        <strong style="color: #92400e; font-size: 1.2em;">THREATS</strong>
+                        <ul style="margin-top: 5px;">
+                            <li>Student perception of guests (NATO/Tesla risks)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflection -->
+            <section class="center">
+                <h2>Team Reflection</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 50px;">
+                    <h3>Dmytro</h3>
+                    <h3>Muhammad</h3>
+                    <h3>Rune</h3>
+                    <h3>Simon</h3>
+                    <h3>Yoni</h3>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="center" data-background="https://ruhehowest.github.io/international-project-blog/assets/img/eindhoven-view.jpg" data-background-color="#1D4ED8">
+                <div style="background: rgba(0,0,0,0.5); padding: 40px; border-radius: 20px;">
+                    <h2 style="color: white;">Thank You!</h2>
+                    <p style="color: var(--blue-100);">Eindhoven 2024</p>
+                    <p style="font-size: 0.6em; color: var(--blue-200); margin-top: 50px;">ruhehowest.github.io/international-project-blog/</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'convex',
+            backgroundTransition: 'zoom',
+            width: 1200,
+            height: 700,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
+        });
+    </script>
+</body>
+</html>
